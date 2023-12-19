@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MySQL Query Form</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MySQL Query Form</h1>
+  
+    <form id="queryForm">
+      <label for="hostname">Hostname:</label>
+      <input type="text" id="hostname" name="hostname" placeholder="Enter hostname" required>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+      <label for="database">Database:</label>
+      <input type="text" id="database" name="database" placeholder="Enter database" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+      <label for="customQuery">Custom SQL Query:</label>
+      <textarea id="customQuery" name="customQuery" placeholder="Enter your SQL query" rows="4" required></textarea>
+
+      <button type="button" onclick="submitForm()">Execute Query</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
+
+
+
+

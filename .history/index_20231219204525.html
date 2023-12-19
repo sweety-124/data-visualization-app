@@ -1,0 +1,37 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Visualization App</h1>
+        <form id="databaseForm">
+            <label for="hostname">Hostname:</label>
+            <input type="text" id="hostname" name="hostname" required>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="database">Database:</label>
+            <input type="text" id="database" name="database" required>
+            <label for="customQuery">Custom SQL Query:</label>
+            <textarea id="customQuery" name="customQuery" placeholder="Enter your SQL query"></textarea>
+
+            <button type="button" onClick="connectDatabase()">Connect</button>
+           
+        </form>
+    </div>
+    <div id="chartContainer"></div>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
