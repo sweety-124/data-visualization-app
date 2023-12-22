@@ -19,9 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $data = array();
 
         while ($row = $result->fetch_assoc()) {
+            // Assuming you want to extract a specific column named 'value'
             $data[] = $row['temperature'];
         }
 
+        // Encode the data as JSON and send it to the client
         echo json_encode($data);
     } else {
         echo 'Query failed: ' . $conn->error;

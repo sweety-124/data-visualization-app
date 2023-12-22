@@ -37,7 +37,7 @@ function drawLineChart(data, container) {
   dataArray.forEach((value, index) => {
 
           dataTable.addRow([`Data Point ${index + 1}`, value]);
-      
+
   });
 
   const options = {
@@ -46,10 +46,10 @@ function drawLineChart(data, container) {
       legend: { position: 'bottom' },
       vAxis: {
           title: 'Temperature',
-          minValue: 0, 
-          maxValue: 100, 
+          minValue: 0, // Set your desired minimum value
+          maxValue: 100, // Set your desired maximum value
           gridlines: {
-              count: 11, 
+              count: 11, // Set the number of gridlines (intervals)
           },
       },
   };

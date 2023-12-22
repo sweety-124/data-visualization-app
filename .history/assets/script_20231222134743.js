@@ -28,6 +28,7 @@ function submitForm() {
 
 
 function drawLineChart(data, container) {
+  // Parse the plain text data (array of values)
   const dataArray = data.split(',').map(value => parseFloat(value.trim())); // Modify based on your data format
 
   const dataTable = new google.visualization.DataTable();
@@ -35,9 +36,9 @@ function drawLineChart(data, container) {
   dataTable.addColumn('number', 'Temperature');
 
   dataArray.forEach((value, index) => {
-
+      if (index <= 50) {
           dataTable.addRow([`Data Point ${index + 1}`, value]);
-      
+      }
   });
 
   const options = {
@@ -46,10 +47,10 @@ function drawLineChart(data, container) {
       legend: { position: 'bottom' },
       vAxis: {
           title: 'Temperature',
-          minValue: 0, 
-          maxValue: 100, 
+          minValue: 0, // Set your desired minimum value
+          maxValue: 100, // Set your desired maximum value
           gridlines: {
-              count: 11, 
+              count: 11, // Set the number of gridlines (intervals)
           },
       },
   };
